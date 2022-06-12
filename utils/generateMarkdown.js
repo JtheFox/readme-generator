@@ -28,7 +28,7 @@ function generateMarkdown(data) {
 ${data.description}
 
 ## Installation
-${data.installation.split(',').map(e => `- ${e.trim()}`).join('\n')}
+${data.installation}
 
 ## Usage
 ${data.usage}

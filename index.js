@@ -18,7 +18,7 @@ const questions = [
     {
         type: 'input',
         name: 'installation',
-        message: 'Enter installation instructions, separated by comma:'
+        message: 'Enter installation instructions:'
     },
     {
         type: 'input',
@@ -39,7 +39,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'Select your license type:',
-        choices: ['None']
+        choices: ['MIT', 'APACHE', 'GPL', 'BSD', 'None']
     },
     {
         type: 'input',
