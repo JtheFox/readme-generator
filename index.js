@@ -27,7 +27,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'contribution',
+        name: 'contributing',
         message: 'Enter contribution guidelines:'
     },
     {
@@ -39,7 +39,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'Select your license type:',
-        choices: []
+        choices: ['None']
     },
     {
         type: 'input',
@@ -54,14 +54,18 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    try {
+        fs.writeFileSync(fileName, data);
+        return console.log('README generated successfully!');
+    } catch { err => { return console.error(err) }}
+}
 
 function init() {
     console.log('Welcome to the Professional Readme Generator');
     inquirer.prompt(questions)
         .then(answers => {
-            generateMarkdown(answers);
-            // TODO: write to file
+            writeToFile('README-generated.md', generateMarkdown(answers));
         })
         .catch(err => console.error(err));
 }
