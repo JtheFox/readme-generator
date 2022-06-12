@@ -29,7 +29,7 @@ ${renderLicenseBadge(data.license)}
 3. [Usage Information](#usage)
 4. [Contribution Guidelines](#contributing)
 5. [Test Instructions](#tests)
-6. [Questions](#questions?)
+6. [Questions](#questions)
 7. [License](#license)
 
 ## Description
