@@ -44,6 +44,9 @@ ${data.usage}
 ## Contributing
 ${data.contributing.split(',').map(e => `- ${e.trim()}`).join('\n')}
 
+## Tests
+${data.tests}
+
 ## Questions?
 Contact me:
 - [At GitHub/${data.username}](https://github.com/${data.username})
