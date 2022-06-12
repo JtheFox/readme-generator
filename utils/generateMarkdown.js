@@ -14,34 +14,34 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   // TODO: add license
   return `# ${data.title}
-  
-  ## Table of Contents
-  1. [Description](#description)
-  2. [Installation Instructions](#installation)
-  3. [Usage Information](#usage)
-  4. [Contribution Guidelines](#contributing)
-  5. [Test Instructions](#tests)
-  6. [Questions](#questions?)
-  7. [License](#license)
 
-  ## Description
-  ${data.description}
+## Table of Contents
+1. [Description](#description)
+2. [Installation Instructions](#installation)
+3. [Usage Information](#usage)
+4. [Contribution Guidelines](#contributing)
+5. [Test Instructions](#tests)
+6. [Questions](#questions?)
+7. [License](#license)
 
-  ## Installation
-  ${data.installation.split(',').map(e => `- ${e.trim()}`).join('\n')}
+## Description
+${data.description}
 
-  ## Usage
-  ${data.usage}
+## Installation
+${data.installation.split(',').map(e => `- ${e.trim()}`).join('\n')}
 
-  ## Contributing
-  ${data.contributing.split(',').map(e => `- ${e.trim()}`).join('\n')}
+## Usage
+${data.usage}
 
-  ## Questions?
-  Contact me:
-  - [At GitHub/${data.username}](https://github.com/${data.username})
-  - [Email Me](mailto:${data.email})
+## Contributing
+${data.contributing.split(',').map(e => `- ${e.trim()}`).join('\n')}
 
-  ## License
+## Questions?
+Contact me:
+- [At GitHub/${data.username}](https://github.com/${data.username})
+- [Email Me](mailto:${data.email})
+
+## License
 
 `;
 }
