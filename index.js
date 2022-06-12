@@ -50,7 +50,7 @@ const questions = [
             },
             {
                 name: 'GPL',
-                value: 'GPL-3'
+                value: 'GPL-3.0'
             },
             {
                 name: 'BSL',

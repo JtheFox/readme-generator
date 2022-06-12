@@ -8,7 +8,7 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   return license.length === 0 ? '' : 
-    `[${license.split('-')[0]}](https://choosealicense.com/licenses/${license})`;
+    `[${license.split('-')[0]}](https://choosealicense.com/licenses/${license.toLowerCase()})`;
 }
 
 // Create a function that returns the license section of README
