@@ -1,19 +1,27 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+// Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  return `![License Badge](https://img.shields.io/badge/license-${license.length > 0 ? license.split('-')[0] : 'none'}-blue)`
+}
 
-// TODO: Create a function that returns the license link
+// Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  return license.length === 0 ? '' : 
+    `[${license.split('-')[0]}](https://choosealicense.com/licenses/${license})`;
+}
 
-// TODO: Create a function that returns the license section of README
+// Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  return `This application ${license.length === 0 ? 'has no license.' :
+  `is licensed under the ${renderLicenseLink(license)} license.`}`
+}
 
-// TODO: Create a function to generate markdown for README
+// Create a function to generate markdown for README
 function generateMarkdown(data) {
-  // TODO: add license
   return `# ${data.title}
+${renderLicenseBadge(data.license)}
 
 ## Table of Contents
 1. [Description](#description)
@@ -42,7 +50,7 @@ Contact me:
 - [Email Me](mailto:${data.email})
 
 ## License
-
+${renderLicenseSection(data.license)}
 `;
 }
 
