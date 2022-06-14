@@ -42,10 +42,10 @@ ${data.installation}
 ${data.usage}
 
 ## Contributing
-${data.contributing.split(',').map(e => `- ${e.trim()}`).join('\n')}
+${data.contributing}
 
 ## Tests
-${data.tests}
+${data.tests.split(',').map(e => `- ${e.trim()}`).join('\n')}
 
 ## Questions?
 Contact me:
